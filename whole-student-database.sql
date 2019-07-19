@@ -63,3 +63,14 @@ Where Lastname <> 'Doe';
 
 select * from students;
 select * from bootcamps;
+
+
+CREATE TABLE Assessments
+(
+	Id int not null primary key identity(1,1),
+	Description nvarchar(50) not null
+	Description int not null
+);
+
+INSERT into Assessments (Description) VALUES ('Technology'),
+INSERT into Assessments (Description) VALUES ('Nbr Questions')
