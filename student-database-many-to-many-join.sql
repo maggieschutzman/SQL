@@ -38,7 +38,8 @@ GO
 */
 
 --cast turning score into decimal into whole number
-SELECT Concat(Lastname,', ',Firstname) as 'Name', Description as 'Bootcamp', Technology as 'Assessment', NbrQuestions, NbrCorrect, CAST(((CAST(NbrCorrect as decimal) / CAST(NbrQuestions as decimal)) * 100) as int) as 'Score'
+SELECT Concat(Lastname,', ',Firstname) as 'Name', Description as 'Bootcamp', Technology as 'Assessment', NbrQuestions, NbrCorrect, 
+CAST(((CAST(NbrCorrect as decimal) / CAST(NbrQuestions as decimal)) * 100) as int) as 'Score'
 	FROM Students s
 	Join AssessmentScores sc
 		on s.Id = sc.StudentId
